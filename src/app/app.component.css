@@ -1,0 +1,27 @@
+kendo-appbar .title {
+    font-size: 18px;
+    margin: 0;
+}
+kendo-badge-container {
+    margin-right: 8px;
+}
+kendo-appbar ul {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+kendo-appbar li {
+    margin: 0 9px;
+}
+kendo-appbar li:hover {
+    cursor: pointer;
+    color: #d6002f;
+}
+kendo-appbar .actions .k-button {
+    padding: 0;
+}
+.active{
+    color:red;
+}

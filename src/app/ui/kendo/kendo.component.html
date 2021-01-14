@@ -1,0 +1,34 @@
+<!-- <h1 class="text-center">KENDO PRACTICE</h1> -->
+<h3 class="text-center">Donut Chart</h3>
+<kendo-chart>
+  <kendo-chart-series>
+    <kendo-chart-series-item
+        type="donut" [data]="data"
+        categoryField="kind" field="share">
+      <kendo-chart-series-item-labels
+        [content]="labelContent"
+        color="#fff" background="none">
+      </kendo-chart-series-item-labels>
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+  <kendo-chart-legend [visible]="false"></kendo-chart-legend>
+</kendo-chart>
+<hr>
+
+<kendo-grid [data]="gridData" [height]="410">
+  <kendo-grid-column field="ProductID" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+      </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
